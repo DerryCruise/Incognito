@@ -306,45 +306,45 @@
               <div class="card-header bg-white d-flex justify-content-between align-items-center">
                 <h5 class="mb-0"><i class="fas fa-users-cog me-2"></i>Admin Access Control</h5>
                 <!-- Add Admin Button triggers form -->
-<button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#addAdminForm">
-  <i class="fas fa-plus me-1"></i> Add Admin
-</button>
+                  <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#addAdminForm">
+                    <i class="fas fa-plus me-1"></i> Add Admin
+                  </button>
 
-<!-- Collapsible Add Admin Form -->
-<div class="collapse mt-3" id="addAdminForm">
-  <div class="card card-body">
-    <form method="post">
-      {% csrf_token %}
-      <input type="hidden" name="add_admin" value="1">
+                  <!-- Collapsible Add Admin Form -->
+                  <div class="collapse mt-3" id="addAdminForm">
+                    <div class="card card-body">
+                      <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="add_admin" value="1">
 
-      <div class="mb-3">
-        <label>Username</label>
-        <input type="text" name="username" class="form-control" placeholder="Enter username" required>
-      </div>
+                        <div class="mb-3">
+                          <label>Username</label>
+                          <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                        </div>
 
-      <div class="mb-3">
-        <label>Role</label>
-        <select name="role" class="form-select" required>
-          <option value="" disabled selected>Select Role</option>
-          <option value="Admin">Admin</option>
-          <option value="Moderator">Moderator</option>
-          <option value="Member">Member</option>
-        </select>
-      </div>
+                        <div class="mb-3">
+                          <label>Role</label>
+                          <select name="role" class="form-select" required>
+                            <option value="" disabled selected>Select Role</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Moderator">Moderator</option>
+                            <option value="Member">Member</option>
+                          </select>
+                        </div>
 
-      <div class="mb-3">
-        <label>Status</label>
-        <select name="status" class="form-select" required>
-          <option value="" disabled selected>Select Status</option>
-          <option value="True">Active</option>
-          <option value="False">Inactive</option>
-        </select>
-      </div>
+                        <div class="mb-3">
+                          <label>Status</label>
+                          <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="True">Active</option>
+                            <option value="False">Inactive</option>
+                          </select>
+                        </div>
 
-      <button type="submit" class="btn btn-primary">Save</button>
-    </form>
-  </div>
-</div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </form>
+                    </div>
+                  </div>
 
 
               </div>

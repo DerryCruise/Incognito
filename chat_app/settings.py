@@ -142,3 +142,11 @@ SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SECURE = True  # For HTTPS
 CSRF_COOKIE_SAMESITE = 'Lax'
+
+
+
+import os
+
+STATIC_URL = '/static/'   # URL prefix
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # where you keep CSS/JS in dev
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")    # where collectstatic will put them
